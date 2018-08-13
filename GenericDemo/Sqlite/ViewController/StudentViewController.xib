@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StudentViewController" customModule="GenericDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="ageTF" destination="bSj-qM-OLg" id="Mdh-Zo-kxn"/>
+                <outlet property="baseTableView" destination="GEQ-3Z-bnQ" id="3Ac-Cy-P5G"/>
+                <outlet property="nameTF" destination="4Wu-mr-qgq" id="LBU-pJ-ASk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GEQ-3Z-bnQ">
+                    <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gxM-3z-79C"/>
+                        <outlet property="delegate" destination="-1" id="ZPq-kv-fxK"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AGE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSj-qM-OLg">
+                    <rect key="frame" x="51" y="39" width="252" height="45"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="KwQ-cd-yNH"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wu-mr-qgq">
+                    <rect key="frame" x="51" y="111" width="252" height="45"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q1D-2J-9ls">
+                    <rect key="frame" x="10" y="209" width="355" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G39-Kv-EBM">
+                            <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
+                            <state key="normal" title="ADD"/>
+                            <connections>
+                                <action selector="saveButton:" destination="-1" eventType="touchUpInside" id="hDe-LN-V5D"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdq-o4-5dA">
+                            <rect key="frame" x="89" y="0.0" width="88.5" height="30"/>
+                            <state key="normal" title="UPDATE"/>
+                            <connections>
+                                <action selector="updateButton:" destination="-1" eventType="touchUpInside" id="wHL-UP-viD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvZ-Ts-LkM">
+                            <rect key="frame" x="177.5" y="0.0" width="89" height="30"/>
+                            <state key="normal" title="DELETE"/>
+                            <connections>
+                                <action selector="deleteButton:" destination="-1" eventType="touchUpInside" id="jma-AI-rWl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZm-5S-9hd">
+                            <rect key="frame" x="266.5" y="0.0" width="88.5" height="30"/>
+                            <state key="normal" title="SEARCH"/>
+                            <connections>
+                                <action selector="searchButton:" destination="-1" eventType="touchUpInside" id="xpc-hy-xm1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GEQ-3Z-bnQ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="50%" id="AxA-eU-OAW"/>
+                <constraint firstItem="4Wu-mr-qgq" firstAttribute="width" secondItem="bSj-qM-OLg" secondAttribute="width" id="Dqo-3Q-mJN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bSj-qM-OLg" secondAttribute="trailing" constant="72" id="Eau-gx-oT5"/>
+                <constraint firstItem="GEQ-3Z-bnQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ILF-Ge-bS9"/>
+                <constraint firstItem="Q1D-2J-9ls" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="LsS-lX-Ape"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Q1D-2J-9ls" secondAttribute="trailing" constant="10" id="Tqv-PC-rfA"/>
+                <constraint firstItem="4Wu-mr-qgq" firstAttribute="trailing" secondItem="bSj-qM-OLg" secondAttribute="trailing" id="VD0-qh-hSQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GEQ-3Z-bnQ" secondAttribute="trailing" id="X2s-AS-dze"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GEQ-3Z-bnQ" secondAttribute="bottom" id="ZDS-KC-rAW"/>
+                <constraint firstItem="4Wu-mr-qgq" firstAttribute="leading" secondItem="bSj-qM-OLg" secondAttribute="leading" id="amD-Et-hwv"/>
+                <constraint firstItem="Q1D-2J-9ls" firstAttribute="top" secondItem="4Wu-mr-qgq" secondAttribute="bottom" constant="53" id="eyV-xc-eaW"/>
+                <constraint firstItem="bSj-qM-OLg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="51" id="fj0-hf-ECa"/>
+                <constraint firstItem="4Wu-mr-qgq" firstAttribute="top" secondItem="bSj-qM-OLg" secondAttribute="bottom" constant="27" id="kgQ-NN-K4B"/>
+                <constraint firstItem="bSj-qM-OLg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="kge-PZ-zHm"/>
+                <constraint firstItem="4Wu-mr-qgq" firstAttribute="height" secondItem="bSj-qM-OLg" secondAttribute="height" id="koW-74-9ch"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+</document>
